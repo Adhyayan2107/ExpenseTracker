@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #4CAF50; /* Main color for buttons and headers */
+    --secondary-color: #f44336; /* Color for delete buttons */
+    --background-color: #f9f9f9; /* Background color for the app */
+    --text-color: #333; /* Default text color */
+    --border-radius: 5px; /* Border radius for rounded corners */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.input-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 10px; /* Space between grid items */
+    padding: 20px;
+    background-color: #fff; /* White background for input section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.input-section label {
+    font-weight: bold; /* Bold labels */
+    margin-right: 10px; /* Space between label and input */
+}
+
+.input-section input[type="number"], 
+.input-section input[type="date"], 
+.input-section input[type="text"], 
+.input-section select {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: var(--border-radius); /* Rounded corners */
+}
+
+.input-section button {
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: var(--primary-color); /* Main button color */
+    color: white; /* Text color for buttons */
+    border: none; /* No border */
+    border-radius: var(--border-radius); /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.input-section button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.expenses-list {
+    margin: 20px; /* Margin around the expenses list */
+}
+
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light gray border for table cells */
+    padding: 12px; /* Padding inside table cells */
+    text-align: left; /* Left align text */
+}
+
+th {
+    background-color: var(--primary-color); /* Header background color */
+    color: white; /* Header text color */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light gray background on row hover */
+}
+
+tfoot td {
+    font-weight: bold; /* Bold text for footer */
+    background-color: #f9f9f9; /* Light background for footer */
+}
+
+.delete-btn {
+    padding: 5px 10px; /* Padding for delete button */
+    background-color: var(--secondary-color); /* Delete button color */
+    color: white; /* Text color for delete button */
+    border: none; /* No border */
+    border-radius: var(--border-radius); /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.delete-btn:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+@media (max-width: 600px) {
+    .input-section {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+    }
+
+    .input-section label {
+        font-size: 14px; /* Smaller font size for labels */
+    }
+
+    .input-section input, .input-section select {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    table {
+        font-size: 14px; /* Smaller font size for table */
+    }
+}
